@@ -19,6 +19,8 @@
   display: none;
 }
 
+
+
 .cloud-view {
 
   .pass {
@@ -66,7 +68,8 @@
     background-color: @dash-status-pass;
   }
 
-}
+
+
 
 .widget-detail {
   width: 400px;
@@ -99,3 +102,33 @@
   .text-standard;
   text-align: center;
 }
+
+}
+
+.smalltext {
+  font-fize:2.0rem;
+
+}
+.utilization-summary-table { 
+        td {
+            vertical-align: middle;
+            text-align: center;
+            width: 20%;
+            padding: .5rem .2rem;
+
+            &:first-child {
+                .text-standard;
+                text-align: left;
+                width: 40%;
+                background: none;
+            }
+
+
+        }
+
+        tr {            &:nth-child(odd) {
+                background: @dash-widget-section-highlight;
+            }
+            }
+
+    }

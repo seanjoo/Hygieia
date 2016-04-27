@@ -2,17 +2,30 @@
     'use strict';
 
     var app = angular
-        .module(HygieiaConfig.module)
-        .directive('metricCategory',metricCategory);
+        .module(HygieiaConfig.module);
 
-    function metricCategory() {
-        return {
-            restrict: 'E',
-            scope: { data: '='},
-            templateUrl: 'components/widgets/cloud/directives/metricCategory.html'
-        };
-    }
+    // simple way to add multiple directives with basic templates so we
+    // can break apart the widget
+    var directives = {
+        metricCategory: {
+            scope: { data: '='}
+        },
+        ipUtilization: {}
+    };
+
+    _(directives).forEach(function (obj, name) {
+        app.directive(name, function () {
+            obj = angular.extend({
+                restrict: 'E',
+                templateUrl: 'components/widgets/cloud/directives/' + name + '.html'
+            }, obj);
+            //console.log(obj);
+            return obj;
+        });
+    });
+
 
 })();
+
 
 
