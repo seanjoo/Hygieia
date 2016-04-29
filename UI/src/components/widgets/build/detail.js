@@ -2,6 +2,7 @@
  * Detail controller for the build widget
  */
 (function () {
+    console.log("build stuff");
     'use strict';
 
     angular

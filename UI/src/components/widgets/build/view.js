@@ -3,7 +3,7 @@
  */
 (function () {
     'use strict';
-
+console.log('i am in build widget contorller')
     angular
         .module(HygieiaConfig.module)
         .controller('BuildWidgetViewController', BuildWidgetViewController);

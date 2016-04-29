@@ -1,32 +1,23 @@
-  <div>
-        <div>
-			VPCs
-        </div>
-        <div>
-        	<div class="row">
- 				<div class="col-sm-6">vpc-12341</div>
-				<div class="col-sm-6">300 Subnets</div>
+   <div class="widget">
+    <div class="widget-heading">
+    VPC IP Utilization
+    </div>
+    <div class="widget-body">   
+        <div ng-init="getVpcs()" class="ipUtilizationView">
+        	<div class="row"  style="border-bottom: 1px solid rgba(255,255,255,.25);">
+ 				<div class="col-md-4">VPC ID</span></div>
+				<div class="col-md-2"># Subnets</div>
+				<div class="col-md-2"># high IP usage</div>
+				<div class="col-md-2"># med IP usage</div>
+				<div class="col-md-2"># low IP usage</div>				
+			</div>        
+        	<div class="row clickable" ng-repeat="vpc in vpcs | orderBy: 'id' " ng-click="cloudView.viewSubnetUtilization(vpc)">
+ 				<div class="col-md-4">{{vpc.id}}</div>
+				<div class="col-md-2">{{vpc.subnets.length}}</div>
+				<div class="col-md-2 high">{{vpc.countOfSubnetsByUtilization.high}}</div>
+				<div class="col-md-2 med">{{vpc.countOfSubnetsByUtilization.med}}</div>
+				<div class="col-md-2 low">{{vpc.countOfSubnetsByUtilization.low}}</div>				
 			</div>
-			<div class="row">
- 				<div class="col-sm-6">vpc-12341</div>
-				<div class="col-sm-6">300 Subnets</div>
 			</div>
-			<div class="row">
- 				<div class="col-sm-6">vpc-12341</div>
-				<div class="col-sm-6">300 Subnets</div>
 			</div>
-			<div class="row">
- 				<div class="col-sm-6">vpc-12341</div>
-				<div class="col-sm-6">300 Subnets</div>
-			</div>
-			<div class="row">
- 				<div class="col-sm-6">vpc-12341</div>
-				<div class="col-sm-6">
-					<table><tr><td class="smalltext">hello</td></tr><tr><td>dafsas</td></tr></table>
-
-				</div>
-			</div>
-                </tbody>
-            </table>
-        </div>
-    </div>   
+ </div>   

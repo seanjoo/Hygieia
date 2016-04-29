@@ -1,7 +1,7 @@
 
 (function () {
     'use strict';
-
+    console.log("module.js");
     var widget_state,
         config = {
             view: {
