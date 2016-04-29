@@ -24,7 +24,7 @@
                                 chartist-chart-options="subnetUtilization.pieOptions"
                                 chartist-chart-type="Pie"></chartist>
                         <div class="guage-number">
-                            <span fit-text>{{subnetUtilization.percentUsed(item)}}<small class="percent">%</small></span>
+                            <span fit-text>{{subnetUtilization.percentUsed(item) | number:0 }}<small class="percent">%</small></span>
                         </div>
                     </div>
                 </div>
