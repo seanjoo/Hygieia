@@ -40,7 +40,7 @@
       $scope.getVpcs = function() {
         var result = {};
         //,"vpc-e0750985"
-        var requestBody = '{"percentUsedIps":"0","eventType":"API","tag":"ASV","subnetFilter":[{"name":"vpc-id","values":["vpc-45741f21","vpc-9ff33fa","vpc-f98ff19c"]},{"name":"state","values":["available"]} ]}'; 
+        var requestBody = '{"percentUsedIps":"0","eventType":"API","tag":"ASV","subnetFilter":[{"name":"vpc-id","values":["vpc-45741f21","vpc-72c7f716","vpc-85f400e1","vpc-9ff33fa","vpc-f98ff19c","vpc-e0750985","vpc-1f8a7e7b","vpc-f98ff19c"]},{"name":"state","values":["available"]} ]}'; 
         
         result = $http.post('https://ogysssaa22.execute-api.us-east-1.amazonaws.com/dev/ctae-subnet-visigoth',  requestBody)
                     .success(function(data, status, headers, config) {

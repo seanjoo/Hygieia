@@ -3,7 +3,7 @@
   <div class="widget">
 
 <div class="widget-heading">
-            Subnet IP Utilization (vpc-45741f21)
+            Subnet IP Utilization ({{subnetUtilization.vpc.id}})
         </div>
         <div ng-repeat="availZone in subnetUtilization.subnets | orderBy: 'name' " class="col-xs-3">
          <div class="widget-heading">{{availZone.name}}</div>
@@ -24,7 +24,7 @@
                                 chartist-chart-options="subnetUtilization.pieOptions"
                                 chartist-chart-type="Pie"></chartist>
                         <div class="guage-number">
-                            <span fit-text>11<small class="percent">%</small></span>
+                            <span fit-text>{{subnetUtilization.percentUsed(item)}}<small class="percent">%</small></span>
                         </div>
                     </div>
                 </div>
