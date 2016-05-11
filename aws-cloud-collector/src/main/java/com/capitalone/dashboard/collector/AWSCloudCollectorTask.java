@@ -45,7 +45,6 @@ import java.util.Map;
 /**
  * Collects {@link AWSCloudCollector} data from feature content source system.
  */
-@SuppressWarnings("PMD")
 @Component
 public class AWSCloudCollectorTask extends CollectorTask<AWSCloudCollector> {
 
